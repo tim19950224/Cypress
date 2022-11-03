@@ -1,0 +1,24 @@
+{
+  "devDependencies": {
+    "cypress": "^10.10.0",
+    "cypress-mochawesome-reporter": "^3.2.3",
+    "cypress-multi-reporters": "^1.6.1",
+    "mocha": "^10.1.0",
+    "mocha-junit-reporter": "^2.1.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
+  },
+  "scripts": {
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run --browser chrome",
+    "delete-mochawesome-folder": "rm -f mochawesome-report/*.json",
+    "e2e_mochawesome": "cypress run --reporter mochawesome",
+    "merge-json": "npx mochawesome-merge cypress/results/*.json -o Report.json",
+    "html-generator": " npx mochawesome-report-generator Report.json"
+  },
+  "dependencies": {
+    "commands": "^0.0.7"
+  }
+}
