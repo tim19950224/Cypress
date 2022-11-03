@@ -93,3 +93,86 @@ describe('Menu bar', function() {
     //   })
     // })
   // })
+  //--------------------------------------------------------------------------------------
+
+  describe('empty spec', () => {
+  
+    it('Models', () => {
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-86c41ae > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-full').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm5-700/')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-5b3c02c > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-full').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm5-900/')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-00ecd04 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-full').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm12/')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-70d69ed > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-large').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm14/')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-b0cb1b2 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-large').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm16/')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-dafcbec > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-large').click();
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm20/')
+  })
+
+  it('Footer_TM ROBOT', () => {
+    //cy.url().should('eq', '')
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(1) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm5-700/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(2) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm5-900/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(3) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm12/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(4) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm14/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(5) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm16/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(6) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm20/')
+    cy.get('#elementor-tab-title-1731 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
+    cy.get('#elementor-tab-content-1731 > ul > :nth-child(7) > a').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/mobile-series/')
+  })
+
+  it('Case Sharing & Traing_Support', () => {
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get('.elementor-element-23905acc > .elementor-widget-container > .elementor-icon-list-items > :nth-child(1) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/video-application/')
+    cy.get('.elementor-element-23905acc > .elementor-widget-container > .elementor-icon-list-items > :nth-child(2) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/industry/')
+    cy.get('.elementor-element-23905acc > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/view-case-study-look/')
+    cy.get('.elementor-element-280e338 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(1) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/contact-us/')
+    cy.get('.elementor-element-280e338 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(2) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/download-center/')
+    cy.get('.elementor-element-280e338 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/docs/')
+
+   
+    
+
+    cy.get('.elementor-element-280e338 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(5) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/tm-academic/')
+    cy.get('.elementor-element-280e338 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(6) > a > .elementor-icon-list-text').click()
+    cy.url().should('eq', 'https://www.tm-robot.com/en/partner-area/')
+    
+  })
+  
+  it('test', () => {
+    cy.visit('https://www.tm-robot.com/en/')
+    cy.get(Command['123']).click() 
+    cy.url().should('eq', 'https://academic.tm-robot.com/')// Oline Training   eq error
+  })
+
+})
