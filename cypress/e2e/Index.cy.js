@@ -1,95 +1,128 @@
 import Control from "../common/user/userControl.js"
+var header = String.empty;
 
-describe('Top bar', function() {
+describe('官網測試', function() {
   
-    beforeEach( function() {     
-      cy.visit('https://www.tm-robot.com/en/')
-    })
-
-    it('TM Icon', function(){
-      cy.get(Control['TM_icon']).click()
-      cy.url().should('eq','https://www.tm-robot.com/en/')
-    })
-    
-    it('Login', function(){
-      cy.get(Control['Login']).click()
-      cy.url().should('eq','https://www.tm-robot.com/en/login/')
-    })
-
-    // // 切換語言Button找不到元素
-    // it('Language', function(){
-    //   cy.get(Control['Language']).contains('English').dblclick({force : true})
-    //   cy.url().should('eq','https://www.tm-robot.com/en/')
-    // })
-})
-
-describe('Menu bar', function() {
-
-    context('AI Cobot', function() { 
+    context('Top bar', function() {
 
       beforeEach( function() {     
         cy.visit('https://www.tm-robot.com/en/')
-        cy.get(Control['AI_cobot']).dblclick({force : true})
       })
-    
-      it('TM5-700', function(){
-        
+
+      it('TM Icon', function(){
+        cy.get(Control['TM_icon']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/')
       })
-    
-      it('AI_cobot', function(){
-        cy.get(Control['AI_cobot']).dblclick({force : true})
-        
+      
+      it('Login', function(){
+        cy.get(Control['Login']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/login/')
       })
-    
-    
+  
+      // // 切換語言Button找不到元素
+      // it('Language', function(){
+      //   cy.get(Control['Language']).contains('English').dblclick({force : true})
+      //   cy.url().should('eq','https://www.tm-robot.com/en/')
+      // })
+    })
+
+    context('Menu bar', function() {
+
+      beforeEach( function() {     
+        cy.visit('https://www.tm-robot.com/en/')
+        if(header == String.empty)
+        { cy.get(Control['AI_cobot']).dblclick({force: true}) }
+        else if (header == "Solution & Services")
+        { cy.get(Control['Solution-Serices']).dblclick({force: true}) }
+        else if (header == "Case Sharing")
+        { cy.get(Control['Case-Sharing']).dblclick({force: true}) }
+        else if (header == "Training-Support")
+        { cy.get(Control['Training-Support']).dblclick({force: true}) }
+        else if (header == 'About Us')
+        { cy.get(Control['About-Us']).dblclick({force: true}) }
+      })
+
+      it('AI Cobot [TMRobot、TMvision、Accessories & Software]', function(){
+        cy.get(Control['700']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm5-700/')
+        cy.get(Control['900']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm5-900/')
+        cy.get(Control['12']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm12/')
+        cy.get(Control['14']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm14/')
+        cy.get(Control['16']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm16/')
+        cy.get(Control['20']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm20/')
+        cy.get(Control['Mobile']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/mobile-series/')
+        cy.get(Control['vAOI']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-ai-aoi-edge/')
+        cy.get(Control['3D']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-3dvision/')
+        cy.get(Control['Add-on']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-add-on/')
+        cy.get(Control['Accessories']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/accessories-category/accessory-device/')
+        header = "Solution & Services";
+      })
+
+      it('Solution & Services [AI、Integration Service、Partner Service]', function(){
+        cy.get(Control['TrainingServer']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-ai-training-server/')
+        cy.get(Control['aAOI']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-ai-aoi-edge/')
+        cy.get(Control['Image']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-image-manager/')
+        cy.get(Control['Palletizing']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-palletizing-solutions/')
+        cy.get(Control['Plug&Play']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-plugandplay/')
+        header = "Case Sharing";
+      })
+
+      it('Case Sharing', function(){
+        cy.get(Control['Application']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/video-application/')
+        cy.get(Control['Industry']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/industry/')
+        cy.get(Control['Successful']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/view-case-study-look/')
+        header = "Training & Support";
+      })
+
+      it('Training & Support', function(){
+        cy.get(Control['Academic']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-academic/')
+        cy.get(Control['OnlineTraining']).click({force: true})
+        cy.url().should('eq','https://academic.tm-robot.com/')
+        cy.get(Control['Contact']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/contact-us/')
+        cy.get(Control['DownloadCenter']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/download-center/')
+        cy.get(Control['TechnicalDocument']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/docs/')
+        cy.get(Control['PartnerArea']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/partner-login/')
+        header = "About Us";
+      })
+
+      it('About Us', function(){
+        cy.get(Control['AboutUs']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/about-us/')
+        cy.get(Control['CompanyProfile']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/company-profile/')
+        cy.get(Control['SearchForDistributor']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/search-for-distributor/')
+        cy.get(Control['News']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/tm-news/')
+        cy.get(Control['GlobalEvent']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/events-archive/')
+        cy.get(Control['OmronNetwork']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com/en/techman-x-omron/')
+        header = String.empty;
+      })
+
     })
 })
-
-// describe('TM AI+ 測試', function() {
-    
-//       context('登入頁面測試', function() {
-//         it('當輸入正確帳號密碼,應登入成功', function(){
-//           cy.visit('https://172.25.50.51:8080/#/login')
-//           cy.fixture('userLogin').then(({Email, Password}) => {
-//             cy.get('input[type=email]').clear()
-//             cy.get('input[type=email]').type(Email)
-//             cy.get('input[type=password').clear()
-//             cy.get('input[type=password').type(Password)
-//             cy.get('.btn').contains('提交').click({force: true})
-//             /* ==== Generated with Cypress Studio ==== */
-//             cy.get(':nth-child(4) > .nav-link').click();
-//             cy.get(':nth-child(1) > .rt-tr > [style="flex: 220 0 auto; width: 220px; max-width: 220px;"] > .btn-group > .btn-btn').click();
-//             cy.get('.mb-1 > .btn').click();
-//             cy.get('.mb-1 > .btn').click();
-//             // cy.get('#btnNext').click().then((number) =>{
-              
-//             //   if(page == "") cy.get(':nth-child(2) > .LazyLoad > img').click() 
-//             // })
-
-//             // cy.get('.row').find('.text-right').invoke('text').then((text) => {
-              
-//             //   cy.log(expect(text.trim()).equal('0/36')) //cy.get('#btnNext').click()
-//             // })
-            
-//             cy.get('.text-right')
-            
-//             /* ==== End Cypress Studio ==== */
-//           }) 
-          
-//         })
-//       })
-    
-    // context('PCHOME介面測試', function() {
-    //   it('Login', () => {
-    //     cy.visit('https://24h.pchome.com.tw/?gclid=CjwKCAjwwL6aBhBlEiwADycBIEkx-kmI2BAaeM-ygyfSy-XYwV8MtdS-zi3j02H89V2djnYoLO36hhoCbREQAvD_BwE');
-    //     //cy.get('.a12word__box:nth-child(1)').click();
-    //     //cy.get('').click({force: true})
-    //     //cy.get('.raven-menu-item.raven-link-item.has-submenu').contains('TM Robot').dblclick({force: true});
-    //     //cy.url().should('eq', 'https://www.tm-robot.com/en/tm-robot/')
-    //     /* ==== Generated with Cypress Studio ==== */
-    //     cy.get('.c-siteSearchInput').type('洗衣球{enter}');
-    //     cy.get('#DAAK7P-A900F3MDD > .c2f > .prod_name > a').invoke('removeAttr','target').click();
-    //     /* ==== End Cypress Studio ==== */
-    //   })
-    // })
-  // })
