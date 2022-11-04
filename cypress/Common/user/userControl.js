@@ -1,7 +1,7 @@
 // **let**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定
 
 let Control = {
-    // ################### Top bar ####################
+    // ################### Top bar ##################################################################################################################################################################################################################################
     // [TM icon]
     "TM_icon" : ".elementor-element-0843aa0 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-desktop",
     
@@ -11,8 +11,8 @@ let Control = {
     // [Language_English]
     "Language" : "#sm-16673927015117317-1",
 
-    // ################### Menu bar ####################
-    // #####[AI-cobot]######
+    // ################### Menu bar ##################################################################################################################################################################################################################################
+    // #####[AI-cobot]###############################################################
     "AI_cobot" : "#jet-menu-item-72760 > .top-level-link > .jet-menu-item-wrapper",
 
     // [TM5-700]
@@ -48,7 +48,7 @@ let Control = {
     // [Accessories]
     "Accessories" : ".menu-accessories-software-container > .jet-custom-nav > .menu-item-type-custom > .jet-custom-nav__item-link",
 
-    // ######[Solution & Services]######
+    // ######[Solution & Services]###############################################################
     "Solution-Serices" : "#jet-menu-item-73053 > .top-level-link > .jet-menu-item-wrapper",
 
     // [AI+ Training Server]
@@ -66,7 +66,7 @@ let Control = {
     // [TM Plug&Play]
     "Plug&Play" : ".menu-partner-service-container > .jet-custom-nav > .menu-item > .jet-custom-nav__item-link",
 
-    // ######[Case Sharing]######
+    // ######[Case Sharing]###############################################################
     "Case-Sharing" : "#jet-menu-item-73095 > .top-level-link",
 
     // [Application]
@@ -78,7 +78,7 @@ let Control = {
     // [Successful Stories]
     "Successful" : "#jet-menu-item-74469 > .sub-level-link > .jet-menu-item-wrapper",
 
-    // ######[Training & Support]######
+    // ######[Training & Support]###############################################################
     "Training-Support" : "#jet-menu-item-73123 > .top-level-link",
 
     // [TM Academic]
@@ -99,7 +99,7 @@ let Control = {
     // [Partner Area]
     "PartnerArea" : ".jet-custom-nav__item-74514 > .jet-custom-nav__item-link",
 
-    // ######[Training & Support]######
+    // ######[Training & Support]###############################################################
     "About-Us" : "#jet-menu-item-73131 > .top-level-link",
 
     // [About Us]
@@ -119,6 +119,16 @@ let Control = {
 
     // [OMRON Network]
     "OmronNetwork" : "#jet-menu-item-73136 > .sub-level-link > .jet-menu-item-wrapper",
+
+    // ################### Applications 循環圖片 ##################################################################################################################################################################################################################################
+    // [Button Next]
+    "IndexApplications_BNext": ".swiper-button-next",
+
+    // [Food Packaging and Palletizing at Cheese Factory]
+    "AppTag1" : ".swiper-slide-active > .raven-post-wrapper > .raven-post > .raven-post-image-wrap > .raven-post-image > .raven-post-image-overlay",
+
+    // [TM Robot + AMR Application Example]
+    "AppTag2" : ".swiper-slide-next > .raven-post-wrapper > .raven-post > .raven-post-image-wrap > .raven-post-image > .raven-post-image-overlay",
 }
 
 export default Control
