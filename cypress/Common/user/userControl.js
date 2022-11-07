@@ -14,6 +14,9 @@ let Control = {
     // #### Menu bar ####
     "AI_cobot" : "#jet-menu-item-72760 > .top-level-link > .jet-menu-item-wrapper",
 
+    // Wait 0
+    "Wait" : "crypto.wait(0)"
+
 }
 
 export default Control

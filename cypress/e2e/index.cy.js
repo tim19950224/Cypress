@@ -98,8 +98,8 @@ describe('Menu bar', function() {
 
   //-------------------------------------------------------------------------------------- Tim maintain
 
-  describe('Robot Models', () => {
-  
+  describe('AI Cobot Series', () => {
+    Control['Wait']
     it('Models', () => {
     cy.visit('https://www.tm-robot.com/en/')
     cy.get('.elementor-element-86c41ae > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-full').click();
@@ -120,7 +120,7 @@ describe('Menu bar', function() {
     cy.get('.elementor-element-dafcbec > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-large').click();
     cy.url().should('eq', 'https://www.tm-robot.com/en/tm20/')
   })
-  describe('Robot Models', () => {
+  describe('Footer', () => {
     it('AI Cobot', () => {
       //cy.url().should('eq', '')
       cy.visit('https://www.tm-robot.com/en/')
@@ -150,7 +150,7 @@ describe('Menu bar', function() {
       cy.url().should('eq', 'https://www.tm-robot.com/en/tm-ai-aoi-edge/')
       cy.get('#elementor-tab-title-1732 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
       cy.get('#elementor-tab-content-1732 > ul > :nth-child(2) > a').click()
-      // cy.url().should('eq', 'https://www.tm-robot.com/en/tm-3dvision/')
+      cy.url().should('eq', 'https://www.tm-robot.com/en/tm-3dvision/')
     })
     it('Solution & Services', () => {
       cy.get('#elementor-tab-title-7271 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
@@ -205,7 +205,7 @@ describe('Menu bar', function() {
       cy.get('.elementor-element-51bbb9f > .elementor-widget-container > .elementor-icon-list-items > :nth-child(2) > a > .elementor-icon-list-text').click()
       cy.url().should('eq', 'https://www.tm-robot.com/en/company-profile/')
       cy.get('.elementor-element-51bbb9f > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
-      cy.url().should('eq', 'https://www.tm-robot.com/en/search-for-distributor/') //Search for Distributor   eq Error
+      cy.url().should('eq', 'https://www.tm-robot.com/en/search-for-distributor/') 
       cy.get('.elementor-element-51bbb9f > .elementor-widget-container > .elementor-icon-list-items > :nth-child(4) > a > .elementor-icon-list-text').click()
       cy.url().should('eq', 'https://www.tm-robot.com/en/tm-news/')
       cy.get('.elementor-element-51bbb9f > .elementor-widget-container > .elementor-icon-list-items > :nth-child(5) > a > .elementor-icon-list-text').click()
