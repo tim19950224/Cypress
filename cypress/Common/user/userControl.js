@@ -1,15 +1,30 @@
 // **let**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定
 
 let Control = {
-    // ################### Top bar ##################################################################################################################################################################################################################################
-    // [TM icon]
-    "TM_icon" : ".elementor-element-0843aa0 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-desktop",
+    // ################### Header ##################################################################################################################################################################################################################################
+    // [TM icon_header]
+    "TM_icon_header" : ".elementor-element-0843aa0 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-desktop",
     
     // [Login]
     "Login" : "#menu-95cc4da > .menu-item-type-post_type > .raven-menu-item",
 
-    // [Language_English]
-    "Language" : "#sm-16673927015117317-1",
+    // [Language-英文]
+    "en" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(1) > a",
+
+    // [Language-簡中]
+    "zh_hans" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(1) > a",
+
+    // [Language-繁中]
+    "zh_hant" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(2) > a",
+
+    // [Language-德文]
+    "de" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(3) > a",
+
+    // [Language-日文]
+    "ja" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(4) > a",
+
+    // [Language-韓文]
+    "ko" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(5) > a",
 
     // ################### Menu bar ##################################################################################################################################################################################################################################
     // #####[AI-cobot]###############################################################
@@ -129,6 +144,16 @@ let Control = {
 
     // [TM Robot + AMR Application Example]
     "AppTag2" : ".swiper-slide-next > .raven-post-wrapper > .raven-post > .raven-post-image-wrap > .raven-post-image > .raven-post-image-overlay",
+
+    // ################### Footer (tim) ##################################################################################################################################################################################################################################
+    // Wait 0
+    "Wait" : "crypto.wait(0)",
+
+    // [TM icon_Footer]
+    "TM_icon_footer" : ".elementor-col-33 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-tablet",
+
+    // [Privacy & Cookies Policy]
+    "PrivacyCookiesPolicy" : ".elementor-heading-title > a",
 }
 
 export default Control
