@@ -4,7 +4,7 @@ var header = String.empty;
 
 describe('達明機器人官網 <語系:英文> - 【首頁連結測試】', function() {
     
-    context('Header', function() {
+    context('Top bar', function() {
 
       beforeEach( function() {     
         cy.visit('https://www.tm-robot.com/en/')
@@ -22,9 +22,6 @@ describe('達明機器人官網 <語系:英文> - 【首頁連結測試】', fun
 
       // 切換語言Button找不到元素
       it('Language changes', function(){
-        // 簡中網址有問題
-        // cy.get(Control['zh_hans']).click({force: true})
-        // cy.url().should('eq','https://www.tm-robot.com.cn/zh-hans/')
         cy.get(Control['zh_hant']).click({force: true})
         cy.url().should('eq','https://www.tm-robot.com/zh-hant/')
         cy.get(Control['de']).click({force: true})
@@ -35,6 +32,9 @@ describe('達明機器人官網 <語系:英文> - 【首頁連結測試】', fun
         cy.url().should('eq','https://www.tm-robot.com/ko/')
         cy.get(Control['en']).click({force: true})
         cy.url().should('eq','https://www.tm-robot.com/en/')
+        // 簡中網址單獨測試
+        cy.get(Control['zh_hans']).click({force: true})
+        cy.url().should('eq','https://www.tm-robot.com.cn/zh-hans/')
       })
     })
 
@@ -258,6 +258,14 @@ describe('達明機器人官網 <語系:英文> - 【首頁連結測試】', fun
         cy.visit('https://www.tm-robot.com/en/')
         cy.get('.elementor-element-dafcbec > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .elementor-image > a > .attachment-large').click();
         cy.url().should('eq', 'https://www.tm-robot.com/en/tm20/')
+      })
+    })
+
+    context('Embrace the Future of Automation', () => {
+      it('Contact Us', () => {
+        cy.visit('https://www.tm-robot.com/en/')
+        cy.get('.elementor-button-link').click()
+        cy.url().should('eq', 'https://www.tm-robot.com/en/contact-us/')
       })
     })
 
