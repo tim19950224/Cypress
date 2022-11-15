@@ -11,8 +11,11 @@ let Control = {
     // [Language-英文]
     "en" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(1) > a",
 
-    // [Language-簡中]
-    "zh_hans" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(1) > a",
+    // [Language-簡中(英文版)]
+    "zh_hans_en" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(1) > a",
+
+    // [Language-簡中(簡中版)]
+    "zh_hans" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(2) > a",
 
     // [Language-繁中]
     "zh_hant" : ".elementor-widget-container > nav > ul > :nth-child(2) > ul > :nth-child(2) > a",
