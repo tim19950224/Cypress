@@ -1,7 +1,7 @@
 import Control from "../common/user/userControl.js"
 var header = String.empty;
 
-describe('達明機器人官網 <語系:繁體中文> - 【首頁連結測試】', function() {
+describe('達明機器人官網 <語系:簡體中文> - 【首頁連結測試】', function() {
     
     // context('Top bar', function() {
 
@@ -435,7 +435,7 @@ context('Case Sharing', () => {
             cy.url().should('eq','https://www.tm-robot.com.cn/zh-hans/')
         })
 
-        // it('Privacy & Cookies Policy', function(){
+        // it('Privacy & Cookies Policy', function(){  //Issue
             
         //     cy.get('.elementor-heading-title > a').click()
         //     cy.url().should('eq','https://beian.miit.gov.cn/#/Integrated/index')
