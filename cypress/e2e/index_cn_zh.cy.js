@@ -286,48 +286,48 @@ beforeEach( function() {
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(1) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm5-700/')
-    })
-    it('TM5-900', () => {
+        })
+        it('TM5-900', () => {
         
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(2) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm5-900/')
-    })
-    it('TM12', () => {
+        })
+        it('TM12', () => {
         
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(3) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm12/')
-    })
-    it('TM14', () => {
+        })
+        it('TM14', () => {
         
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(4) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm14/')
-    })
-    it('TM16', () => {
+        })
+        it('TM16', () => {
         
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(5) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm16/')
-    })
-    it('TM20', () => {
+        })
+        it('TM20', () => {
         
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(6) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm20/')
-    })
-    it('mobile series', () => {
+        })
+        it('mobile series', () => {
         cy.get('#elementor-tab-title-1451 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1451 > ul > :nth-child(7) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/mobile-series/')
-    })
-    it('TM AI+ AOI Edge', () => {
+        })
+        it('TM AI+ AOI Edge', () => {
         cy.get('#elementor-tab-title-1452 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1452 > ul > :nth-child(1) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm-ai-aoi-edge/')
-    })
-    it('TM 3DVision', () => {
+     })
+     it('TM 3DVision', () => {
         cy.get('#elementor-tab-title-1452 > .elementor-toggle-icon > .elementor-toggle-icon-closed > .fas').click()
         cy.get('#elementor-tab-content-1452 > ul > :nth-child(2) > a').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm-3dvision/')
@@ -366,9 +366,9 @@ context('Case Sharing', () => {
       })
       it('Industy', () => {
         cy.get('.elementor-element-6f26c609 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(2) > a > .elementor-icon-list-text').click()
-        cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/industry/')
-    })
-    it('Successful Stories', () => {
+        cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/video-industry/')
+         })
+     it('Successful Stories', () => {
         cy.get('.elementor-element-6f26c609 > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
         cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/view-case-study-look/')
       })
@@ -382,21 +382,22 @@ context('Case Sharing', () => {
             cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(2) > a > .elementor-icon-list-text').click()
             cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/download-center/')
         })
-        it('Technical Documet', () => {
-            cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
-            cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/docs/')
-        })
+        // it('Technical Documet', () => {  //簡體沒有
+        //     cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click()
+        //     cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/docs/')
+        // })
         it('Online Training', () => {
-            cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(4) > a > .elementor-icon-list-text').click() 
+            cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(3) > a > .elementor-icon-list-text').click() 
+            cy.wait(2000)
             cy.url().should('eq', 'https://academic.tm-robot.com/')
         })
-        it('TM Academic', () => {
-            cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(5) > a > .elementor-icon-list-text').click()
-            cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm-academic/')
-        })
+        // it('TM Academic', () => {    //簡體沒有
+        //     cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(5) > a > .elementor-icon-list-text').click()
+        //     cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/tm-academic/')
+        // })
         it('Partner Area', () => {
-             cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(6) > a > .elementor-icon-list-text').click()
-             cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/partner-area/')
+             cy.get('.elementor-element-72e3b1ca > .elementor-widget-container > .elementor-icon-list-items > :nth-child(4) > a > .elementor-icon-list-text').click()
+             cy.url().should('eq', 'https://www.tm-robot.com.cn/zh-hans/recent_news/')
         })
      })
     context('About Us', () => {

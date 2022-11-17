@@ -154,7 +154,6 @@ let Control = {
 
     // [TM icon_Footer]
     "TM_icon_footer" : ".elementor-col-33 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-tablet",
-
     // [Privacy & Cookies Policy]
     "PrivacyCookiesPolicy" : ".elementor-heading-title > a",
 }
