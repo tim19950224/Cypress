@@ -3,6 +3,7 @@
 let Control = {
     // ################### Header ##################################################################################################################################################################################################################################
     // [TM icon_header]
+    "TM_icon_header_en" : ".elementor-element-0843aa0 > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > picture > img",
     "TM_icon_header" : ".elementor-element-0843aa0 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-desktop",
     
     // [Login]
@@ -223,8 +224,9 @@ let Control = {
     "Wait" : "crypto.wait(0)",
 
     // [TM icon_Footer]
-    "TM_icon_footer" : ".elementor-col-33 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-tablet",
-
+    "TM_icon_footer_cn" : ".elementor-col-33 > .elementor-column-wrap > .elementor-widget-wrap > .elementor-element > .elementor-widget-container > .raven-widget-wrapper > .raven-site-logo > .raven-site-logo-link > .raven-site-logo-tablet",
+    "TM_icon_footer" : ".raven-site-logo.raven-site-logo-customizer > .raven-site-logo-link",
+                        
     // [Privacy & Cookies Policy]
     "PrivacyCookiesPolicy" : ".elementor-heading-title > a",
 }
